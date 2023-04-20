@@ -17,5 +17,8 @@ used in this project in order to facilitate faster prototyping.
 - [ ] RawNet 3
 - [ ] SincNet
 
+## Dataset
+- [Indian Celeb Dataset](https://www.kaggle.com/datasets/gaurav41/voxceleb1-audio-wav-files-for-india-celebrity)
+
 ## Comments
 **This is a work in progress**
