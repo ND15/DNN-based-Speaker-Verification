@@ -1,6 +1,6 @@
-## Speaker Recognition (Tensorflow-2)
+## Speaker Verification (Tensorflow-2)
 A Tensorflow-2 Repository containing implementation of DNN architectures
-for Speech Recognition/Speaker Verification. The results of the models along with detailed analysis
+for Speaker Identification/Speaker Verification. The results of the models along with detailed analysis
 will be available [here](https://nd15.github.io/nemo/). For the purpose of training and testing
 a smaller version of VoxCeleb dataset containing audio samples of only Indian Celebritites is 
 used in this project in order to facilitate faster prototyping.
