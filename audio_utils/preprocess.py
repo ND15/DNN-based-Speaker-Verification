@@ -22,7 +22,7 @@ def prepare_audio_and_labels(files):
 
     for i in files:
         audio_files.append(i)
-        labels.append(i.split('\\')[-3])
+        labels.append(i.split('/')[-3])  # // for windows
 
     return audio_files, labels
 
@@ -79,7 +79,7 @@ def dataset(filenames, df):
 
     print(len(audio_files))
 
-    random_indices = np.random.choice(len(audio_files), 275, replace=False)
+    random_indices = np.random.choice(len(audio_files), len(audio_files), replace=False)
 
     mels, ids = create_dataset(np.asarray(audio_files)[random_indices],
                                np.asarray(names)[random_indices])
@@ -95,8 +95,8 @@ def dataset(filenames, df):
 
 
 if __name__ == "__main__":
-    f = glob.glob("D:/Downloads/Vox/vox1_indian/content/vox_indian/**/**/*.wav")
-    d = pd.read_csv("D:/Downloads/Vox/vox1_meta.csv", sep='\t')
+    f = glob.glob("/home/nikhil/Datasets/vox/vox1_indian/content/vox_indian/**/**/*.wav")
+    d = pd.read_csv("/home/nikhil/Datasets/vox/vox1_meta.csv", sep='\t')
     X, y = dataset(f, d)
     print(X.shape)
     print(X[0])
