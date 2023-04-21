@@ -16,7 +16,7 @@ from models.baseline_model import model
 from audio_utils.metrics import calculate_eer
 from sklearn.model_selection import train_test_split
 
-BATCH = 128
+BATCH = 64
 MODE = 'train'
 
 
@@ -30,22 +30,24 @@ def tf_dataset(X, y):
     print(y_train.shape, y_test.shape, y_valid.shape)
 
     train_dataset = tf.data.Dataset.from_tensor_slices((X_train, y_train))
-    train_dataset = train_dataset.cache().shuffle(buffer_size=1000).batch(BATCH, drop_remainder=True)
+    train_dataset = train_dataset.shuffle(buffer_size=1000).batch(BATCH, drop_remainder=True)
     train_dataset = train_dataset.prefetch(buffer_size=1000)
 
+    print("Train Dataset")
+
     test_dataset = tf.data.Dataset.from_tensor_slices((X_test, y_test))
-    test_dataset = test_dataset.cache().shuffle(buffer_size=1000).batch(BATCH, drop_remainder=True)
+    test_dataset = test_dataset.shuffle(buffer_size=1000).batch(BATCH, drop_remainder=True)
     test_dataset = test_dataset.prefetch(buffer_size=1000)
 
     valid_dataset = tf.data.Dataset.from_tensor_slices((X_valid, y_valid))
-    valid_dataset = valid_dataset.cache().shuffle(buffer_size=1000).batch(BATCH, drop_remainder=True)
+    valid_dataset = valid_dataset.shuffle(buffer_size=1000).batch(BATCH, drop_remainder=True)
     valid_dataset = valid_dataset.prefetch(buffer_size=1000)
 
     return train_dataset, test_dataset, valid_dataset
 
 
-filenames = glob.glob("D:/Downloads/Vox/vox1_indian/content/vox_indian/**/**/*.wav")
-df = pd.read_csv("D:/Downloads/Vox/vox1_meta.csv", sep='\t')
+filenames = glob.glob("/home/nikhil/Datasets/vox/vox1_indian/content/vox_indian/**/**/*.wav")
+df = pd.read_csv("/home/nikhil/Datasets/vox/vox1_meta.csv", sep='\t')
 X, y = dataset(filenames, df)
 y = y.reshape((len(y), 1))
 
@@ -71,7 +73,6 @@ for i in test_data.take(1).as_numpy_iterator():
     print(oe.inverse_transform(i[1]), "\t", y_pred)
 
 print(x_pred.shape, y_pred.shape)
-
 
 if MODE == 'train':
     m = model()
