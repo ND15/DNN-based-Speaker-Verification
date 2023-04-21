@@ -9,9 +9,7 @@ used in this project in order to facilitate faster prototyping.
 - [X] Baseline CNN Model
 - [X] Siamese Capsule Network([Implementation Here](https://github.com/ND15/SiameseSpeech))
 - [X] Temporal Convolutional Network
-- [X] RawNet 1
-- [ ] RawNet 2
-- [ ] RawNet 3
+- [X] RawNet
 - [ ] SincNet
 
 ## Dataset
