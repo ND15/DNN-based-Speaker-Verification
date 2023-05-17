@@ -18,9 +18,10 @@ used in this project in order to facilitate faster prototyping.
 
 
 ## Paper Links
-1. [RAWNET: ADVANCED END-TO-END DEEP NEURAL NETWORK USING RAW WAVEFORMS FOR TEXT-INDEPENDENT SPEAKER VERIFICATION](https://arxiv.org/pdf/1904.08104.pdf)
-2. [SIAMESE CAPSULE NETWORK FOR END-TO-END SPEAKER RECOGNITION IN THE WILD](https://arxiv.org/pdf/2009.13480.pdf)
-3. [TIME-DOMAIN SPEAKER VERIFICATION USING TEMPORAL CONVOLUTIONAL NETWORKS](https://ieeexplore.ieee.org/document/9414765)
+1. [Rawnet: Advanced end-to-end deep neural network using raw waveforms for text-independent speaker verification](https://arxiv.org/pdf/1904.08104.pdf)
+2. [Siamese Capsule Network For End-to-end Speaker Recognition In The Wild](https://arxiv.org/pdf/2009.13480.pdf)
+3. [Time-domain Speaker Verification Using Temporal Convolutional Networks](https://ieeexplore.ieee.org/document/9414765)
+4. [Speaker Verification System Based on Deformable CNN and Time-Frequency Attention](http://www.apsipa.org/proceedings/2020/pdfs/0001689.pdf)
 
 ## Comments
 **This is a work in progress**
