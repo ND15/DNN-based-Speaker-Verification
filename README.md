@@ -5,12 +5,13 @@ will be available [here](https://nd15.github.io/nemo/). For the purpose of train
 a smaller version of VoxCeleb dataset containing audio samples of only Indian Celebritites is 
 used in this project in order to facilitate faster prototyping.
 
-## Models
-- [X] Baseline CNN Model
-- [X] Siamese Capsule Network([Implementation Here](https://github.com/ND15/SiameseSpeech))
-- [X] Temporal Convolutional Network
-- [X] RawNet
-- [ ] SincNet
+## Models Implemented
+- Baseline CNN Model
+- Temporal Convolutional Network
+- Siamese Capsule Network([Implementation Here](https://github.com/ND15/SiameseSpeech))
+- RawNet
+- ResDefNet
+
 
 ## Dataset
 - [Indian Celeb Dataset](https://www.kaggle.com/datasets/gaurav41/voxceleb1-audio-wav-files-for-india-celebrity)
